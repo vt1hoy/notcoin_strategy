@@ -1,18 +1,18 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { translations } from '../i18n/translations';
-import { getAfricaFieldEntries } from '../data/africa-field-entries';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { translations } from '../../i18n/translations';
+import { getAfricaFieldEntries } from '../../data/africa-field-entries';
 
-const t = translations.en;
+const t = translations.fr;
 const a = t.pages.africa;
-const entries = getAfricaFieldEntries('en');
+const entries = getAfricaFieldEntries('fr');
 const telegramHref = '#';
 ---
 
 <MainLayout title={`${a.title} · ${t.meta.defaultTitle}`}>
 	<div class="africa-page desk-page">
 		<p class="desk-nav-back">
-			<a class="btn btn--secondary btn--compact btn--nav-back" href="/">
+			<a class="btn btn--secondary btn--compact btn--nav-back" href="/fr">
 				{a.backToStrategy}
 			</a>
 		</p>

@@ -1,8 +1,8 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { translations } from '../i18n/translations';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { translations } from '../../i18n/translations';
 
-const t = translations.en;
+const t = translations.ru;
 const simulationHref = '#';
 const telegramHref = '#';
 ---
@@ -64,7 +64,7 @@ const telegramHref = '#';
 					</div>
 				</div>
 				<div class="card__footer">
-					<a class="btn btn--secondary btn--compact" href="/wallets">{t.home.hero.ctaWallets}</a>
+					<a class="btn btn--secondary btn--compact" href="/ru/wallets">{t.home.hero.ctaWallets}</a>
 				</div>
 			</article>
 		</section>
@@ -74,7 +74,7 @@ const telegramHref = '#';
 				<h2 class="card__title">{t.home.africaBlock.title}</h2>
 				<p class="card__text">{t.home.africaBlock.stats}</p>
 				<div class="btn-row btn-row--stack">
-					<a class="btn btn--secondary" href="/africa">{t.home.africaBlock.cta}</a>
+					<a class="btn btn--secondary" href="/ru/africa">{t.home.africaBlock.cta}</a>
 				</div>
 			</article>
 

@@ -1,8 +1,8 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import { translations } from '../i18n/translations';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { translations } from '../../i18n/translations';
 
-const t = translations.en;
+const t = translations.ru;
 const w = t.pages.wallets;
 const explorerHref = '#';
 ---
@@ -10,7 +10,7 @@ const explorerHref = '#';
 <MainLayout title={`${w.title} · ${t.meta.defaultTitle}`}>
 	<div class="desk-page">
 		<p class="desk-nav-back">
-			<a class="btn btn--secondary btn--compact btn--nav-back" href="/">
+			<a class="btn btn--secondary btn--compact btn--nav-back" href="/ru">
 				{w.backToStrategy}
 			</a>
 		</p>

@@ -1,4 +1,4 @@
-import type { Lang } from '../i18n/lang';
+import type { SiteLocale } from '../i18n/locale-routes';
 
 export type AfricaFieldEntry = {
 	title: string;
@@ -11,7 +11,7 @@ export type AfricaFieldEntry = {
 	link: string;
 };
 
-export const africaFieldEntries: Record<Lang, AfricaFieldEntry[]> = {
+export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 	en: [
 		{
 			title: 'Bamako — Initial Desk Activation',
@@ -83,6 +83,6 @@ export const africaFieldEntries: Record<Lang, AfricaFieldEntry[]> = {
 	],
 };
 
-export function getAfricaFieldEntries(lang: Lang): AfricaFieldEntry[] {
+export function getAfricaFieldEntries(lang: SiteLocale): AfricaFieldEntry[] {
 	return africaFieldEntries[lang];
 }

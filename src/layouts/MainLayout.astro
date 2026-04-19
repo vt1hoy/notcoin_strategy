@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { getLang } from '../i18n/lang';
+import { localeFromPathname, switcherHref } from '../i18n/locale-routes';
 import { translations } from '../i18n/translations';
 
 interface Props {
@@ -9,16 +9,15 @@ interface Props {
 
 const { title } = Astro.props;
 
-const url = Astro.url ?? new URL('http://localhost');
-const pathname = url.pathname || '/';
-const lang = getLang(url);
+const pathname = (Astro.url ?? new URL('http://localhost')).pathname || '/';
+const lang = localeFromPathname(pathname);
 const t = translations[lang];
 
 const htmlLang = lang === 'en' ? 'en' : lang === 'ru' ? 'ru' : 'fr';
 
-const hrefEn = pathname;
-const hrefRu = `${pathname}?lang=ru`;
-const hrefFr = `${pathname}?lang=fr`;
+const hrefEn = switcherHref(pathname, 'en');
+const hrefRu = switcherHref(pathname, 'ru');
+const hrefFr = switcherHref(pathname, 'fr');
 ---
 
 <!doctype html>
