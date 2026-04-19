@@ -1,9 +1,9 @@
 export type Lang = 'en' | 'ru' | 'fr';
 
 export function getLang(url: URL): Lang {
-	const param = url.searchParams.get('lang');
-	if (param === 'ru') return 'ru';
-	if (param === 'fr') return 'fr';
+	const lang = url.searchParams.get('lang');
+	if (lang === 'ru') return 'ru';
+	if (lang === 'fr') return 'fr';
 	return 'en';
 }
 
