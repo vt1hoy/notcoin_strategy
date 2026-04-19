@@ -1,5 +1,8 @@
 # build output
 dist/
+
+# Vercel local / adapter output (never commit)
+.vercel/
 # generated types
 .astro/
 
