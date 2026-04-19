@@ -3,7 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { getLang, withLang } from '../i18n/lang';
 import { translations } from '../i18n/translations';
 
-const url = Astro.url;
+const url = Astro.url ?? new URL('http://localhost');
 const lang = getLang(url);
 const t = translations[lang];
 const w = t.pages.wallets;

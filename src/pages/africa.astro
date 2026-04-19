@@ -4,7 +4,7 @@ import { getLang, withLang } from '../i18n/lang';
 import { translations } from '../i18n/translations';
 import { getAfricaFieldEntries } from '../data/africa-field-entries';
 
-const url = Astro.url;
+const url = Astro.url ?? new URL('http://localhost');
 const lang = getLang(url);
 const t = translations[lang];
 const a = t.pages.africa;
