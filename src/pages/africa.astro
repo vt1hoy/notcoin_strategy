@@ -1,0 +1,113 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { getLang, withLang } from '../i18n/lang';
+import { translations } from '../i18n/translations';
+import { getAfricaFieldEntries } from '../data/africa-field-entries';
+
+const url = new URL(Astro.request.url);
+const lang = getLang(url);
+const t = translations[lang];
+const a = t.pages.africa;
+const entries = getAfricaFieldEntries(lang);
+const telegramHref = '#';
+---
+
+<MainLayout title={`${a.title} · ${t.meta.defaultTitle}`}>
+	<div class="africa-page desk-page">
+		<p class="desk-nav-back">
+			<a class="btn btn--secondary btn--compact btn--nav-back" href={withLang('/', lang)}>
+				{a.backToStrategy}
+			</a>
+		</p>
+
+		<header class="desk-header africa-header">
+			<h1 class="page-title desk-header__title africa-header__title">{a.title}</h1>
+			<p class="page-lede desk-header__subtitle">{a.subtitle}</p>
+		</header>
+
+		<section class="card africa-narrative africa-narrative--dashboard" aria-labelledby="africa-narrative-lead">
+			<p id="africa-narrative-lead" class="africa-narrative__lead">{a.narrativeLead}</p>
+			<div class="africa-narrative__shell">
+				<div class="africa-narrative__left">
+					<div class="africa-narrative__block-grid" role="list">
+						{
+							a.narrativeBlocks.map((block) => (
+								<div class="africa-narrative-block" role="listitem">
+									<div class="africa-narrative-block__label">{block.label}</div>
+									<div class="africa-narrative-block__body">
+										{block.lines.map((line) => (
+											<p class="africa-narrative-block__line">{line}</p>
+										))}
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+				<div class="africa-narrative__visual" aria-hidden="true">
+					<div class="africa-narrative__visual-frame">
+						<img src="/hero-map.svg" alt="" width="1200" height="800" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="africa-feed" aria-labelledby="africa-feed-heading">
+			<h2 id="africa-feed-heading" class="field-feed__label">{a.feedLabel}</h2>
+			<div class="field-feed">
+				{
+					entries.map((entry) => (
+						<article class="card field-entry field-entry--split">
+							<div class="field-entry__grid">
+								<div class="field-entry__text">
+									<h3 class="field-entry__title">{entry.title}</h3>
+									<p class="field-entry__desc">{entry.description}</p>
+									{entry.outcomes && entry.outcomes.length > 0 ? (
+										<div class="field-entry__outcomes">
+											<p class="field-entry__outcomes-label">{a.outcomesLabel}</p>
+											<ul class="field-entry__outcomes-list">
+												{entry.outcomes.slice(0, 3).map((item) => (
+													<li>{item}</li>
+												))}
+											</ul>
+										</div>
+									) : null}
+									<p class="field-entry__meta">
+										<span class="field-entry__meta-plain">{entry.location}</span>
+										<span class="field-entry__meta-sep" aria-hidden="true">
+											{' '}
+											|{' '}
+										</span>
+										<span class="field-entry__meta-plain">{entry.date}</span>
+										<span class="field-entry__meta-sep" aria-hidden="true">
+											{' '}
+											|{' '}
+										</span>
+										<span class="field-entry__status">{entry.status}</span>
+									</p>
+								</div>
+								<div class="field-entry__media">
+									<div class="field-entry__media-frame">
+										<img src={entry.image} alt="" width="640" height="360" loading="lazy" />
+									</div>
+								</div>
+							</div>
+							<div class="field-entry__footer">
+								<a class="btn btn--secondary btn--compact field-entry__link" href={entry.link}>
+									{a.entryLinkLabel}
+								</a>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		<div class="card africa-cta">
+			<p class="africa-cta__text">{a.telegramCtaTitle}</p>
+			<a class="btn btn--secondary btn--compact africa-cta__btn" href={telegramHref}>
+				{a.telegramCtaButton}
+			</a>
+		</div>
+	</div>
+</MainLayout>

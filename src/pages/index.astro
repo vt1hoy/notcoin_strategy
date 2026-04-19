@@ -1,0 +1,95 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { getLang, withLang } from '../i18n/lang';
+import { translations } from '../i18n/translations';
+
+const url = new URL(Astro.request.url);
+const lang = getLang(url);
+const t = translations[lang];
+const simulationHref = '#';
+const telegramHref = '#';
+---
+
+<MainLayout title={t.meta.defaultTitle}>
+	<div class="stack">
+		<section class="hero" aria-labelledby="hero-title">
+			<div class="hero__copy">
+				<h1 id="hero-title" class="hero__title">{t.home.hero.title}</h1>
+				<p class="hero__subtitle">{t.home.hero.subtitle}</p>
+				<p class="hero__desc">{t.home.hero.description}</p>
+				<div class="hero__actions">
+					<a class="btn btn--primary" href={simulationHref}>{t.home.hero.ctaSimulation}</a>
+					<a class="btn btn--secondary" href={telegramHref}>{t.home.hero.ctaTelegram}</a>
+				</div>
+			</div>
+			<div class="hero__visual" role="img" aria-hidden="true"></div>
+		</section>
+
+		<section class="grid-2" aria-label={t.home.aria.simulationStrategy}>
+			<article class="card">
+				<div class="preview">
+					<img src="/simulation-preview.svg" alt="" width="960" height="540" loading="lazy" />
+				</div>
+				<h2 class="card__title">{t.home.simulation.title}</h2>
+				<p class="card__text">{t.home.simulation.body}</p>
+				<div class="btn-row btn-row--stack">
+					<a class="btn btn--launch" href={simulationHref}>{t.home.simulation.launch}</a>
+				</div>
+			</article>
+
+			<article class="card">
+				<span class="pill">{t.home.strategy.label}</span>
+				<h2 class="card__title">{t.home.strategy.title}</h2>
+				<div class="strategy-metrics" role="group" aria-label={t.home.strategy.title}>
+					<div class="stat stat--focus">
+						<span class="stat__label">{t.home.strategy.totalNcLabel}</span>
+						<span class="stat__value stat__value--focus">{t.home.strategy.totalNcValue}</span>
+					</div>
+					<div class="stat stat--compact-metric">
+						<span class="stat__label">{t.home.strategy.totalTonLabel}</span>
+						<span class="stat__value">{t.home.strategy.totalTonValue}</span>
+					</div>
+					<div class="stat stat--compact-metric">
+						<span class="stat__label">{t.home.strategy.activeWalletsLabel}</span>
+						<span class="stat__value">{t.home.strategy.activeWalletsValue}</span>
+					</div>
+					<div class="stat stat--compact-metric">
+						<span class="stat__label">{t.home.strategy.phaseLabel}</span>
+						<span class="stat__value">{t.home.strategy.phaseValue}</span>
+					</div>
+					<div class="stat stat--compact-metric">
+						<span class="stat__label">{t.home.strategy.lastUpdateLabel}</span>
+						<span class="stat__value">{t.home.strategy.lastUpdateValue}</span>
+					</div>
+					<div class="stat stat--compact-metric">
+						<span class="stat__label">{t.home.strategy.holdLabel}</span>
+						<span class="stat__value">{t.home.strategy.holdValue}</span>
+					</div>
+				</div>
+				<div class="card__footer">
+					<a class="btn btn--secondary btn--compact" href={withLang('/wallets', lang)}>{t.home.hero.ctaWallets}</a>
+				</div>
+			</article>
+		</section>
+
+		<section class="grid-2" aria-label={t.home.aria.africaTelegram}>
+			<article class="card">
+				<h2 class="card__title">{t.home.africaBlock.title}</h2>
+				<p class="card__text">{t.home.africaBlock.stats}</p>
+				<div class="btn-row btn-row--stack">
+					<a class="btn btn--secondary" href={withLang('/africa', lang)}>{t.home.africaBlock.cta}</a>
+				</div>
+			</article>
+
+			<article class="card telegram-minimal">
+				<div>
+					<h2 class="card__title">{t.home.telegramBlock.title}</h2>
+					<p class="card__text">{t.home.telegramBlock.hint}</p>
+				</div>
+				<div class="btn-row btn-row--stack">
+					<a class="btn btn--secondary" href={telegramHref}>{t.home.telegramBlock.cta}</a>
+				</div>
+			</article>
+		</section>
+	</div>
+</MainLayout>
