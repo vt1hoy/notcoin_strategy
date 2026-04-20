@@ -3,8 +3,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { translations } from '../i18n/translations';
 
 const t = translations.en;
-const simulationHref = 'https://example_simulation/';
-const telegramHref = 'https://example_telegram/';
+const simulationHref = 'https://notcoin-ten.vercel.app/';
+const telegramHref = 'https://t.me/notcoin_incbot';
 ---
 
 <MainLayout title={t.meta.defaultTitle}>
@@ -29,7 +29,7 @@ const telegramHref = 'https://example_telegram/';
 		<section class="grid-2" aria-label={t.home.aria.simulationStrategy}>
 			<article class="card">
 				<div class="preview">
-					<img src="/simulation-preview.svg" alt="" width="960" height="540" loading="lazy" />
+					<img src="/simulation-preview.png" alt="" width="960" height="540" loading="lazy" />
 				</div>
 				<h2 class="card__title">{t.home.simulation.title}</h2>
 				<p class="card__text">{t.home.simulation.body}</p>

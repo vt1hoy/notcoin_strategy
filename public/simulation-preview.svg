@@ -1,24 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
-  <rect width="960" height="540" fill="#0c1018"/>
-  <rect x="32" y="32" width="896" height="64" rx="10" fill="#111822" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="56" y="52" width="180" height="12" rx="4" fill="rgba(212,175,55,0.35)"/>
-  <rect x="56" y="72" width="120" height="8" rx="4" fill="rgba(139,152,171,0.35)"/>
-  <rect x="32" y="120" width="560" height="388" rx="12" fill="#111822" stroke="rgba(255,255,255,0.08)"/>
-  <path d="M72 420 L160 300 248 340 336 220 424 260 512 180 600 240" stroke="#d4af37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-  <path d="M72 460 L160 380 248 400 336 340 424 360 512 300 600 340" stroke="rgba(139,152,171,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <g opacity="0.9">
-    <circle cx="160" cy="300" r="5" fill="#d4af37"/>
-    <circle cx="336" cy="220" r="5" fill="#d4af37"/>
-    <circle cx="512" cy="180" r="5" fill="#d4af37"/>
-  </g>
-  <rect x="616" y="120" width="312" height="180" rx="12" fill="#111822" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="640" y="150" width="120" height="10" rx="3" fill="rgba(139,152,171,0.35)"/>
-  <rect x="640" y="175" width="200" height="8" rx="3" fill="rgba(139,152,171,0.2)"/>
-  <rect x="640" y="195" width="160" height="8" rx="3" fill="rgba(139,152,171,0.2)"/>
-  <rect x="640" y="230" width="80" height="28" rx="6" fill="rgba(212,175,55,0.25)" stroke="rgba(212,175,55,0.45)"/>
-  <rect x="616" y="320" width="312" height="188" rx="12" fill="#111822" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="640" y="350" width="100" height="10" rx="3" fill="rgba(139,152,171,0.35)"/>
-  <rect x="640" y="380" width="264" height="10" rx="3" fill="rgba(139,152,171,0.18)"/>
-  <rect x="640" y="400" width="220" height="10" rx="3" fill="rgba(139,152,171,0.18)"/>
-  <rect x="640" y="420" width="240" height="10" rx="3" fill="rgba(139,152,171,0.18)"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1163.000000pt" height="691.000000pt" viewBox="0 0 1163.000000 691.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,691.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M0 3455 l0 -3455 5815 0 5815 0 0 3455 0 3455 -5815 0 -5815 0 0
+-3455z m8282 -304 c45 -17 116 -89 132 -134 10 -27 15 -67 13 -113 -4 -94 -39
+-155 -117 -201 -47 -29 -60 -32 -109 -28 -48 3 -51 3 -21 -5 29 -7 26 -8 -20
+-4 -96 9 -178 69 -215 157 -21 50 -14 175 12 218 55 87 131 129 232 124 36 -1
+78 -8 93 -14z"/>
+<path d="M8168 3042 c-8 -9 -33 -49 -56 -89 -67 -115 -58 -133 66 -133 88 0
+122 10 122 37 0 16 -95 189 -109 198 -5 2 -15 -3 -23 -13z m2 -127 l0 -65 -35
+0 c-19 0 -35 5 -35 11 0 13 59 119 66 119 2 0 4 -29 4 -65z m75 -6 c27 -52 25
+-59 -17 -59 -28 0 -28 0 -28 68 0 73 2 73 45 -9z"/>
+</g>
 </svg>
