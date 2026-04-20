@@ -22,7 +22,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-02-14',
 			status: 'Active',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 		{
 			title: 'Accra — Channel reconnaissance',
@@ -32,7 +32,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-03-02',
 			status: 'Monitoring',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 	],
 	ru: [
@@ -45,7 +45,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-02-14',
 			status: 'Активно',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 		{
 			title: 'Аккра — разведка каналов',
@@ -55,7 +55,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-03-02',
 			status: 'Наблюдение',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 	],
 	fr: [
@@ -68,7 +68,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-02-14',
 			status: 'Actif',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 		{
 			title: 'Accra — Reconnaissance des canaux',
@@ -78,7 +78,7 @@ export const africaFieldEntries: Record<SiteLocale, AfricaFieldEntry[]> = {
 			date: '2026-03-02',
 			status: 'Surveillance',
 			image: '/africa-field-placeholder.svg',
-			link: '#',
+			link: 'https://example_ton_explorer/',
 		},
 	],
 };

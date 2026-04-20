@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations';
 
 const t = translations.ru;
 const w = t.pages.wallets;
-const explorerHref = '#';
+const explorerHref = 'https://example_ton_explorer/';
 ---
 
 <MainLayout title={`${w.title} · ${t.meta.defaultTitle}`}>
@@ -47,7 +47,7 @@ const explorerHref = '#';
 							<p class="wallet-card__meta">
 								<span class="wallet-card__status">{entry.status}</span>
 							</p>
-							<a class="wallet-card__link" href={explorerHref}>
+							<a class="wallet-card__link" href={explorerHref} target="_blank" rel="noopener noreferrer">
 								{entry.explorer}
 							</a>
 						</article>

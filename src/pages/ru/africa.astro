@@ -6,7 +6,7 @@ import { getAfricaFieldEntries } from '../../data/africa-field-entries';
 const t = translations.ru;
 const a = t.pages.africa;
 const entries = getAfricaFieldEntries('ru');
-const telegramHref = '#';
+const telegramHref = 'https://example_telegram/';
 ---
 
 <MainLayout title={`${a.title} · ${t.meta.defaultTitle}`}>
@@ -90,7 +90,12 @@ const telegramHref = '#';
 								</div>
 							</div>
 							<div class="field-entry__footer">
-								<a class="btn btn--secondary btn--compact field-entry__link" href={entry.link}>
+								<a
+									class="btn btn--secondary btn--compact field-entry__link"
+									href={entry.link}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									{a.entryLinkLabel}
 								</a>
 							</div>
@@ -102,7 +107,7 @@ const telegramHref = '#';
 
 		<div class="card africa-cta">
 			<p class="africa-cta__text">{a.telegramCtaTitle}</p>
-			<a class="btn btn--secondary btn--compact africa-cta__btn" href={telegramHref}>
+			<a class="btn btn--secondary btn--compact africa-cta__btn" href={telegramHref} target="_blank" rel="noopener noreferrer">
 				{a.telegramCtaButton}
 			</a>
 		</div>

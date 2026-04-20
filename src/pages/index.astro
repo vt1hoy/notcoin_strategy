@@ -3,8 +3,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { translations } from '../i18n/translations';
 
 const t = translations.en;
-const simulationHref = '#';
-const telegramHref = '#';
+const simulationHref = 'https://example_simulation/';
+const telegramHref = 'https://example_telegram/';
 ---
 
 <MainLayout title={t.meta.defaultTitle}>
@@ -15,8 +15,12 @@ const telegramHref = '#';
 				<p class="hero__subtitle">{t.home.hero.subtitle}</p>
 				<p class="hero__desc">{t.home.hero.description}</p>
 				<div class="hero__actions">
-					<a class="btn btn--primary" href={simulationHref}>{t.home.hero.ctaSimulation}</a>
-					<a class="btn btn--secondary" href={telegramHref}>{t.home.hero.ctaTelegram}</a>
+					<a class="btn btn--primary" href={simulationHref} target="_blank" rel="noopener noreferrer">
+						{t.home.hero.ctaSimulation}
+					</a>
+					<a class="btn btn--secondary" href={telegramHref} target="_blank" rel="noopener noreferrer">
+						{t.home.hero.ctaTelegram}
+					</a>
 				</div>
 			</div>
 			<div class="hero__visual" role="img" aria-hidden="true"></div>
@@ -30,7 +34,9 @@ const telegramHref = '#';
 				<h2 class="card__title">{t.home.simulation.title}</h2>
 				<p class="card__text">{t.home.simulation.body}</p>
 				<div class="btn-row btn-row--stack">
-					<a class="btn btn--launch" href={simulationHref}>{t.home.simulation.launch}</a>
+					<a class="btn btn--launch" href={simulationHref} target="_blank" rel="noopener noreferrer">
+						{t.home.simulation.launch}
+					</a>
 				</div>
 			</article>
 
@@ -84,7 +90,9 @@ const telegramHref = '#';
 					<p class="card__text">{t.home.telegramBlock.hint}</p>
 				</div>
 				<div class="btn-row btn-row--stack">
-					<a class="btn btn--secondary" href={telegramHref}>{t.home.telegramBlock.cta}</a>
+					<a class="btn btn--secondary" href={telegramHref} target="_blank" rel="noopener noreferrer">
+						{t.home.telegramBlock.cta}
+					</a>
 				</div>
 			</article>
 		</section>
